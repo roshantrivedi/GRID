@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container{
+        height: 500px;
+        background-color: white;
+        border: 2px solid gray;
+        display:grid;
+        row-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;        /* width of columns */
+        /* grid-template-columns: repeat(3, 1fr);  // 3 times 1fr */
+        column-gap: 20px;
+        grid-template-rows: 100px 80px;       /* height of rows */
+        grid-auto-rows: 50px;                /* height of rest of the rows */
+        /* justify content: center;   */     /* works on X-axis */
+        align-content: center;      /* default value is stretch, need some height of container, Y-axis */
+        /* align-items: center; */         /* works on each particular(small) div */
+
+}
+
+.items{
+    border: 2px solid red;
+    background-color: bisque;
+}
+
+.item1{
+    /* justify-self: center;
+    align-self: center; */
+    grid-column: 1/3;           /* start from 1, go till 3 (depends on grid-template-columns) */
+}
+
+.item4{
+    grid-column: 2/4
+}
+
+.item3{
+    grid-row:2/4;
+}
+
+.item7{
+    grid-area: 4/1/4/3;        /* short-hand for grid-column & grid-area */
+}
